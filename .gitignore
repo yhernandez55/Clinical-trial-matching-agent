@@ -1,0 +1,23 @@
+# Environment
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.Python
+*.egg-info/
+
+# Virtual environment
+.venv/
+venv/
+
+# ADK session storage
+sessions.db
+
+# IDE
+.antigravity/
+.vscode/
+
+# macOS
+.DS_Store

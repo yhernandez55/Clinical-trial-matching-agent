@@ -1,0 +1,190 @@
+{
+  "plans": [
+    {
+      "plan_name": "BlueCare Standard PPO",
+      "plan_id": "BCSPPO-001",
+      "plan_type": "PPO",
+      "network": "broad",
+      "covered_procedures": {
+        "lab_visit": {
+          "covered": true,
+          "coverage_pct": 80,
+          "notes": "In-network lab only",
+          "prior_auth_required": false
+        },
+        "imaging_mri": {
+          "covered": true,
+          "coverage_pct": 70,
+          "notes": "Pre-authorization required for non-emergency MRI",
+          "prior_auth_required": true
+        },
+        "imaging_ct": {
+          "covered": true,
+          "coverage_pct": 70,
+          "notes": "Pre-authorization required",
+          "prior_auth_required": true
+        },
+        "imaging_pet": {
+          "covered": true,
+          "coverage_pct": 60,
+          "notes": "Only covered for oncology staging; prior auth required",
+          "prior_auth_required": true
+        },
+        "specialist_visit": {
+          "covered": true,
+          "coverage_pct": 80,
+          "notes": "Referral required from PCP",
+          "prior_auth_required": false
+        },
+        "investigational_treatment": {
+          "covered": false,
+          "coverage_pct": 0,
+          "notes": "Investigational/experimental treatments are not covered under this plan",
+          "prior_auth_required": false
+        },
+        "infusion_therapy": {
+          "covered": true,
+          "coverage_pct": 75,
+          "notes": "In-network infusion center required; prior auth needed",
+          "prior_auth_required": true
+        },
+        "genetic_testing": {
+          "covered": true,
+          "coverage_pct": 50,
+          "notes": "Only covered when medically necessary; prior auth required",
+          "prior_auth_required": true
+        },
+        "clinical_trial_routine_care": {
+          "covered": true,
+          "coverage_pct": 80,
+          "notes": "Routine costs for qualifying clinical trials are covered per ACA mandate",
+          "prior_auth_required": false
+        }
+      }
+    },
+    {
+      "plan_name": "HealthFirst HMO Select",
+      "plan_id": "HFHMOS-002",
+      "plan_type": "HMO",
+      "network": "narrow",
+      "covered_procedures": {
+        "lab_visit": {
+          "covered": true,
+          "coverage_pct": 90,
+          "notes": "Must use plan-designated lab",
+          "prior_auth_required": false
+        },
+        "imaging_mri": {
+          "covered": true,
+          "coverage_pct": 80,
+          "notes": "In-network facility only; prior auth required",
+          "prior_auth_required": true
+        },
+        "imaging_ct": {
+          "covered": true,
+          "coverage_pct": 80,
+          "notes": "In-network facility only; prior auth required",
+          "prior_auth_required": true
+        },
+        "imaging_pet": {
+          "covered": false,
+          "coverage_pct": 0,
+          "notes": "PET scans not covered under HMO Select tier",
+          "prior_auth_required": false
+        },
+        "specialist_visit": {
+          "covered": true,
+          "coverage_pct": 85,
+          "notes": "Referral from primary care physician required",
+          "prior_auth_required": false
+        },
+        "investigational_treatment": {
+          "covered": false,
+          "coverage_pct": 0,
+          "notes": "Experimental and investigational treatments excluded",
+          "prior_auth_required": false
+        },
+        "infusion_therapy": {
+          "covered": true,
+          "coverage_pct": 80,
+          "notes": "Must be administered at a plan-approved facility",
+          "prior_auth_required": true
+        },
+        "genetic_testing": {
+          "covered": false,
+          "coverage_pct": 0,
+          "notes": "Genetic/genomic testing not covered under this tier",
+          "prior_auth_required": false
+        },
+        "clinical_trial_routine_care": {
+          "covered": true,
+          "coverage_pct": 85,
+          "notes": "Routine costs for approved clinical trials covered; trial must meet ACA qualifying criteria",
+          "prior_auth_required": true
+        }
+      }
+    },
+    {
+      "plan_name": "OpenAccess Premier EPO",
+      "plan_id": "OAEPO-003",
+      "plan_type": "EPO",
+      "network": "medium",
+      "covered_procedures": {
+        "lab_visit": {
+          "covered": true,
+          "coverage_pct": 100,
+          "notes": "100% covered in-network with no copay after deductible",
+          "prior_auth_required": false
+        },
+        "imaging_mri": {
+          "covered": true,
+          "coverage_pct": 85,
+          "notes": "No referral needed; prior auth required for outpatient non-emergency",
+          "prior_auth_required": true
+        },
+        "imaging_ct": {
+          "covered": true,
+          "coverage_pct": 85,
+          "notes": "Prior auth required for elective scans",
+          "prior_auth_required": true
+        },
+        "imaging_pet": {
+          "covered": true,
+          "coverage_pct": 75,
+          "notes": "Covered for oncology and neurology indications; prior auth required",
+          "prior_auth_required": true
+        },
+        "specialist_visit": {
+          "covered": true,
+          "coverage_pct": 90,
+          "notes": "No referral required; in-network providers only",
+          "prior_auth_required": false
+        },
+        "investigational_treatment": {
+          "covered": true,
+          "coverage_pct": 50,
+          "notes": "Covered for FDA Breakthrough or Expanded Access trials only; prior auth and medical director review required",
+          "prior_auth_required": true
+        },
+        "infusion_therapy": {
+          "covered": true,
+          "coverage_pct": 85,
+          "notes": "In-network infusion center; prior auth needed for biologic agents",
+          "prior_auth_required": true
+        },
+        "genetic_testing": {
+          "covered": true,
+          "coverage_pct": 80,
+          "notes": "Covered when ordered by an in-network specialist for hereditary cancer or rare disease",
+          "prior_auth_required": true
+        },
+        "clinical_trial_routine_care": {
+          "covered": true,
+          "coverage_pct": 90,
+          "notes": "Broad clinical trial coverage including Phase I–IV; routine care costs fully supported",
+          "prior_auth_required": false
+        }
+      }
+    }
+  ]
+}

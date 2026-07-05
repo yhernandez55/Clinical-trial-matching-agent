@@ -1,0 +1,22 @@
+# Core ADK + Google
+google-adk>=1.0.0
+google-genai
+google-api-core
+
+# MCP
+mcp
+
+# FastAPI + server
+fastapi
+uvicorn[standard]
+pydantic
+
+# HTTP (for ClinicalTrials.gov calls)
+requests
+
+# Environment
+python-dotenv
+
+# Database (ADK session storage)
+sqlalchemy
+aiosqlite
