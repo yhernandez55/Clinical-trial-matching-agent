@@ -19,10 +19,10 @@ SESSION_DB_URL = f"sqlite:///{os.path.join(BASE_DIR, 'sessions.db')}"
 # Create the FastAPI app using ADK's helper
 # This automatically wires up /chat, /sessions, and the ADK web UI
 app = get_fast_api_app(
-    agent_dir=BASE_DIR,
-    session_db_url=SESSION_DB_URL,
-    allow_origins=["*"],  # Restrict in production
-    web=True,             # Enables ADK's built-in chat UI for demo/video
+    agents_dir=BASE_DIR,        
+    session_service_uri=SESSION_DB_URL,  
+    allow_origins=["*"],
+    web=True,
 )
 
 # Health check endpoint:

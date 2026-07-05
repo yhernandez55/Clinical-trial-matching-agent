@@ -58,7 +58,7 @@ async def create_root_agent():
 
     root_agent = LlmAgent(
         name="root_coordinator",
-        model=f"google-gla:{os.getenv('GEMINI_MODEL', 'gemini-2.5-flash')}",
+        model="gemini-2.0-flash",
         instruction=instruction,
         tools=[
             AgentTool(trial_agent),
