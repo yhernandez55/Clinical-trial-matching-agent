@@ -45,7 +45,7 @@ async def create_coverage_checking_agent():
     # Build the agent with gemini-2.5-flash and the MCP toolset:
     agent = LlmAgent(
         name="coverage_checking_agent",
-        model="gemini-2.0-flash",
+        model="gemini-2.5-flash",
         instruction=instruction,
         tools=[toolset],
     )

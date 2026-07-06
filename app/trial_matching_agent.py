@@ -62,7 +62,7 @@ async def create_trial_matching_agent():
     # Build the agent with gemini-2.5-flash and the MCP toolset:
     agent = LlmAgent(
         name="trial_matching_agent",
-        model="gemini-2.0-flash",
+        model="gemini-2.5-flash",
         instruction=instruction,
         tools=[toolset],
     )

@@ -58,7 +58,7 @@ async def create_root_agent():
 
     root_agent = LlmAgent(
         name="root_coordinator",
-        model="gemini-2.0-flash",
+        model="gemini-2.5-flash",
         instruction=instruction,
         tools=[
             AgentTool(trial_agent),
