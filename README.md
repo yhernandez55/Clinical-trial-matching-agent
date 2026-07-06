@@ -15,7 +15,47 @@ Patients get one, fast answer that combines two typically separate burdens – t
 ## Why:
 This problem is not a single lookup, but multi-step reasoning across two different messy domains (clinical eligibility criteria and insurance coverage rules) that have to be cross-referenced against a person’s specific unstructured situation. A static search tool or form can't parse "I have stage 2 type 2 diabetes and my A1C is 8.2" against eligibility criteria written in clinical shorthand, or know which of dozens of plan rules apply. Agents do well because 1) they can take ambiguous, unstructured patient input and map it to structured criteria, 2) the two sub-problems (trial matching and coverage checking) are naturally separable into specialized agents that each do one job well, and 3) a synthesizer agent can reconcile both results into one coherent answer—something a single rigid pipeline would struggle to do cleanly.
 
+## Architecture:
+Patient Input (plain language)
+        ↓
+root_coordinator (gemini-2.5-flash)
+        ↓                    ↓
+trial_matching_agent    coverage_checking_agent
+(gemini-2.5-flash)      (gemini-2.5-flash)
+        ↓                    ↓
+  mcp_server.py       coverage_mcp_server.py
+        ↓                    ↓
+ClinicalTrials.gov    sample_insurance_plans.json
+      API                  (synthetic data)
+
 ## Key Concepts:
   - Agent/multi-agent system
   - MCP server
   - Security features.
+
+## Set Up instractions:
+1. Ensure you have the following software installed: 
+    - Python 3.8 or higher
+    - pip
+    - virtual environment
+    - Node.js 16.14 or higher
+    - Docker
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Set up the environment variables:
+   ```bash
+   cp .env.example .env
+   ```
+   Update the values in the `.env` file with your own API keys and credentials.
+
+4. Run the application
+
+## Security notes:
+- The agent should not store any sensitive patient information. The data should be processed in memory and discarded after each use.
+- The agent should not make any decisions that could directly harm the patient. The agent should only provide information that the patient can use to make their own decisions.
+- The agent should be transparent about its limitations. The agent should clearly state that it is not a medical professional and that its recommendations are not a substitute for professional medical advice.
+
+## DISCLAIMER: 
+output is not medical advice
