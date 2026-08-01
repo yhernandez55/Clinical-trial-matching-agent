@@ -69,17 +69,17 @@ Here's what happens from there:
 ---
 
 ## Architecture
-Patient Input (plain language)
-↓
-root_coordinator (gemini-2.5-flash)
-↓ ↓
-trial_matching_agent coverage_checking_agent
-(gemini-2.5-flash) (gemini-2.5-flash)
-↓ ↓
-mcp_server.py coverage_mcp_server.py
-↓ ↓
-ClinicalTrials.gov v2 sample_insurance_plans.json
-API (synthetic data)
+
+```mermaid
+flowchart TD
+    A[Patient Input - plain language] --> B[root_coordinator\ngemini-2.5-flash]
+    B --> C[trial_matching_agent\ngemini-2.5-flash]
+    B --> D[coverage_checking_agent\ngemini-2.5-flash]
+    C --> E[mcp_server.py]
+    D --> F[coverage_mcp_server.py]
+    E --> G[ClinicalTrials.gov v2 API]
+    F --> H[sample_insurance_plans.json\nsynthetic data]
+```
 
 ---
 
