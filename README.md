@@ -8,6 +8,9 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-Web_Interface-teal)
 ![ClinicalTrials.gov](https://img.shields.io/badge/ClinicalTrials.gov-Public_API-red)
 
+## Kaggle Submission
+[View the full project writeup on Kaggle](https://kaggle.com/competitions/vibecoding-agents-capstone-project/writeups/clinical-trial-matching-agent-with-insurance-cover)
+
 ## Description
 A clinical trial shouldn't require a law degree and an insurance broker to find. 
 Patients searching for trials face two walls: dense eligibility criteria scattered 
